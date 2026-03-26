@@ -26,6 +26,10 @@ header div {
     place-items: center;
 }
 
+.end-header:hover{
+    cursor: pointer;
+}
+
 main {
     background-color: rgb(20, 22, 28);
     min-height: calc(100svh - 70px);
