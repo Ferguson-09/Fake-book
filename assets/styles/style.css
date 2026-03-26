@@ -69,4 +69,7 @@ form {
     margin: 7px 12px;
     border-radius: 5px;
     justify-self: end;
+    background-color: rgb(75, 145, 247);
+    color: #fff;
+    font-weight: bold;
 }
