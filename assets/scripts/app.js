@@ -4,7 +4,11 @@ const main = document.querySelector('main');
 const postBtn = document.querySelector('.post-btn');
 const textArea = document.querySelector('.input');
 const containter = document.querySelector('.container');
-const image = document.querySelector('#imageUpload')
+const image = document.querySelector('#imageUpload');
+const openBtn = document.querySelector('.end-header');
+const overlay = document.querySelector('.overlay');
+const info = document.querySelector('.pop-text');
+const closeBtn = document.querySelector('.close');
 const now = new Date();
 
 const date = now.toLocaleDateString('en-US', {
@@ -49,7 +53,7 @@ class User{
  class Subscriber extends User {
     #pages = [];
     #groups = [];
-    #canMonetize;
+    #canMonetize = Boolean;
 
     constructor (id, name, userName, email, pages, groups, canMonetize) {
         super(id, name, userName, email);
@@ -66,10 +70,21 @@ class User{
 
     set canMonetize(canMonetize) {this.#canMonetize = canMonetize;}
     get canMonetize() {return this.#canMonetize}
+
+    getInfo () {return(`
+        ID: ${this.id} <br>
+        Name: ${this.name} <br>
+        Username: ${this.userName} <br>
+        Email: ${this.email} <br>
+        Pages: ${this.pages} <br>
+        Groups: ${this.groups} <br>
+        Can Monetize: ${this.canMonetize}
+        `)
+    }
  }
 
  const subscriberOne = new Subscriber (
-    '00002619', 'Ferguson Zibiri', 'ferguson_09', 'excelzibiri5@gmail.com', ''
+    '00002619', 'Ferguson Zibiri', 'ferguson_09', 'excelzibiri5@gmail.com', ['Landing-page', ' Home-page'], ['Soccer', ' Baseball'], true
  )
 
  postBtn.addEventListener('click', (a) => {
@@ -112,3 +127,12 @@ class User{
     image.value = '';
  })
 
+openBtn.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+})
+
+info.innerHTML = `${subscriberOne.getInfo()}`
+
+closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+})
