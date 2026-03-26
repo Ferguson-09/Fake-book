@@ -31,6 +31,12 @@ main {
     min-height: calc(100svh - 70px);
     display: grid;
     justify-content: center;
+    gap: 15px;
+    grid-auto-rows: min-content; 
+}
+
+.container{
+    height: fit-content;
 }
 
 .input {
@@ -43,8 +49,9 @@ main {
 
 form {
     background-color: rgb(32, 34, 41);
-    height: 300px;
+    height: 260px;
     display: grid;   
+    margin: 0 10px;
 }
 
 .area {
@@ -52,6 +59,7 @@ form {
     background-color: rgb(32, 34, 41);
     display: grid;
     justify-self: end;
+    border-radius: 8px;
 }
 
 .bottom {
@@ -72,4 +80,43 @@ form {
     background-color: rgb(75, 145, 247);
     color: #fff;
     font-weight: bold;
+}
+
+.post {
+    color: black;
+    background-color: #dfdbdb;
+    height: 300px;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.top {
+    display: flex;
+}
+
+.name {
+    margin-left: 10px;
+}
+
+.date-end {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.text-out {
+    margin: 10px 5px;
+}
+
+.output {
+    height: fit-content;
+    color: black;
+    background-color: #dfdbdb;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.image-out {
+    margin: 7px;
+    width: auto;
+    max-height: 180px;
 }
