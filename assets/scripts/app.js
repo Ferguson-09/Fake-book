@@ -69,12 +69,3 @@ class User{
     const post = document.createElement('div');
     post.textContent = textArea;
  })
-
-
-
-
-
- 
-
-
-
