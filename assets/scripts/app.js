@@ -125,11 +125,11 @@ class User{
 
     textArea.value = '';
     image.value = '';
- })
+ }) 
 
 openBtn.addEventListener('click', () => {
     overlay.style.display = 'flex';
-})
+}) 
 
 info.innerHTML = `${subscriberOne.getInfo()}`
 
