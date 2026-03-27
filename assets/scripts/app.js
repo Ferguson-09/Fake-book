@@ -72,13 +72,13 @@ class User{
     get canMonetize() {return this.#canMonetize}
 
     getInfo () {return(`
-        ID: ${this.id} <br>
-        Name: ${this.name} <br>
-        Username: ${this.userName} <br>
-        Email: ${this.email} <br>
-        Pages: ${this.pages} <br>
-        Groups: ${this.groups} <br>
-        Can Monetize: ${this.canMonetize}
+        <p>ID: ${this.id} </p>
+        <p>Name: ${this.name} </p>
+        <p>Username: ${this.userName} </p>
+        <p>Email: ${this.email} </p>
+        <p>Pages: ${this.pages} </p>
+        <p>Groups: ${this.groups} </p>
+        <p>Can Monetize: ${this.canMonetize}</p>
         `)
     }
  }
